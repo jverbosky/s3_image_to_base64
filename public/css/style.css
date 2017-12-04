@@ -1,0 +1,51 @@
+h1, h2, h3 {
+  font-family: Verdana, Geneva, sans-serif;
+}
+
+p {
+  font: 16px Verdana, Geneva, sans-serif;
+}
+
+.center_text {
+  text-align: center;
+}
+
+.center_block {
+  margin: 0 auto;
+}
+
+.padded {
+  padding: 10px 0px 10px 0px;
+}
+
+.subheader {
+  margin-bottom: 1em;
+  text-align: center;
+}
+
+.img_table td {
+    border: 1px solid grey;
+    padding: 5px;
+    margin: 5px;
+}
+
+.img_row {
+    display:flex;
+    justify-content: center;
+    flex-flow: row wrap;
+}
+
+.img_container {
+    position: relative;
+}
+
+.img_container:hover .target_img {
+    opacity: 0.5;
+}
+
+.target_img {
+    opacity: 1.0;
+    position: relative;  /* these 3 lines verically align img in td */
+    top: 50%;
+    transform: translateY(-50%);
+}

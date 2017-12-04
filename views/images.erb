@@ -1,0 +1,32 @@
+<div class="center_block">
+
+  <div class="subheader center_text">
+    <h3>S3 Image Readback</h3>
+  </div>
+
+  <div id="ajax_result" class="center_text">
+    <p>Results posted here</p>  <!-- use to view update on page -->
+    <!-- <p hidden>Results posted here</p> -->  <!-- use for base64-only ouput -->
+  </div>
+
+  <hr>  <!-- comment out for base64-only ouput -->
+
+  <div>
+    <table class="img_table center_block">
+      <tr class="img_row">
+        <% if images == [] %>
+          <td><i>No images uploaded...</i></td>
+        <% else %>
+          <% images.each do |image| %>
+            <td class="img_container">
+              <img src="<%= image %>" class="target_img" onclick="cacheImage(this.src)">
+            </td>
+          <% end %>
+        <% end %>
+      </tr>
+    </table>
+  </div>
+
+</div>
+
+<script src="/js/image_parser.js"></script>
